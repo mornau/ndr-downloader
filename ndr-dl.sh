@@ -21,7 +21,7 @@ then
 fi
 
 
-URL=`wget -qO- $1 | grep -Eo 'http://media\.ndr\.de/progressive/[0-9]+/[0-9]+/TV-[0-9]+-[0-9]+-[0-9]+\.hi.mp4' | sed 's/^\(.*\.\)hi\(\.mp4\)$/\1'$QUALITY'\2/'`
+URL=`wget -qO- $1 | grep -Eo 'http://media\.ndr\.de/progressive/[0-9]+/[0-9]+/TV-[0-9]+-[0-9]+-[0-9]+\.hi.mp4' | sed 's/^\(.*\.\)hi\(\.mp4\)$/\1'$QUALITY'\2/' | head -n1`
 
 echo Downloading $URL ...
 
