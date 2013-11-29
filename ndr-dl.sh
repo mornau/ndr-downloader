@@ -5,7 +5,7 @@
 
 QUALITY=hq
 
-URLMATCHSTATUS=`echo $1 | grep -Eq '^http://www.ndr.de/fernsehen/sendungen/.*/[[:alnum:]]*[0-9]+\.html$'; echo $?`
+URLMATCHSTATUS=`echo $1 | grep -Eq '^https?://(www|daserste)\.ndr\.de/.*/[[:alnum:]]*[0-9]+\.html$'; echo $?`
 
 if [[ $1 = '' || $URLMATCHSTATUS != 0 ]]
 then
